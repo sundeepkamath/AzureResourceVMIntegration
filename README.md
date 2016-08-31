@@ -8,4 +8,4 @@ This is a **sample quickstart** project that shows how **Azure Resource Manageme
 * Azure Resource Management APIs (ARM)
 * REST client
 
-Please check out the **detailed explanation** of using this utility on **my blog post** [here](http://sundeepkamath.in/2016/08/31/access-azure-resource-manager-virtual-machine-resources-using-arm-apis-part-2/)
+Please check out the **detailed explanation** of using this utility on **my blog post** [here](http://sundeepkamath.in/2016/07/20/access-azure-resource-manager-virtual-machine-resources-using-arm-apis-part-1/)
