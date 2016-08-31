@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Configuration;
 
 namespace AzureResourceVMIntegration
 {
@@ -10,6 +7,18 @@ namespace AzureResourceVMIntegration
     {
         static void Main(string[] args)
         {
+            string accessToken = AzureAD.Authenticate();
+            
+            if (accessToken != null)
+            {
+               AzureRestClient.ExecuteRequest(accessToken, ConfigurationManager.AppSettings[Constants.ResourceVMDetailsUrl])
+                    .ContinueWith((task)=> 
+                    {
+                        Console.WriteLine(task.Result);
+                    });
+                    
+            }
+            Console.ReadLine();
         }
     }
 }
